@@ -99,7 +99,7 @@ func (receiver *Runner) RunCollect() error {
 			sheetName := "Sheet1"
 			//index := file.NewSheet(sheetName)
 			// 设置表头
-			headers := []string{"Url", "title", "StatusCode","Technologies","words"}
+			headers := []string{"Url", "Host","Title", "StatusCode","Technologies","Words"}
 			for colIndex, header := range headers {
 				cell := excelize.ToAlphaString(colIndex+1) + "1"
 				file.SetCellValue(sheetName, cell, header)
@@ -109,12 +109,14 @@ func (receiver *Runner) RunCollect() error {
 				cell := excelize.ToAlphaString(1) + fmt.Sprintf("%d", rowIndex+2)
 				file.SetCellValue(sheetName, cell, rowData.URL)
 				cell = excelize.ToAlphaString(2) + fmt.Sprintf("%d", rowIndex+2)
-				file.SetCellValue(sheetName, cell, rowData.Title)
+				file.SetCellValue(sheetName, cell, rowData.Host)
 				cell = excelize.ToAlphaString(3) + fmt.Sprintf("%d", rowIndex+2)
-				file.SetCellValue(sheetName, cell, rowData.StatusCode)
+				file.SetCellValue(sheetName, cell, rowData.Title)
 				cell = excelize.ToAlphaString(4) + fmt.Sprintf("%d", rowIndex+2)
-				file.SetCellValue(sheetName, cell, rowData.Technologies)
+				file.SetCellValue(sheetName, cell, rowData.StatusCode)
 				cell = excelize.ToAlphaString(5) + fmt.Sprintf("%d", rowIndex+2)
+				file.SetCellValue(sheetName, cell, rowData.Technologies)
+				cell = excelize.ToAlphaString(6) + fmt.Sprintf("%d", rowIndex+2)
 				file.SetCellValue(sheetName, cell, rowData.Words)
 			}
 

@@ -1,10 +1,16 @@
 package cmd
 
-type CliParam struct {
+type CollectParam struct {
 	InputFile string
 	CollectOutput string
 	AliveVerify bool
 
 }
 
-var cliParam = &CliParam{}
+type CdnParam struct {
+	InputFile string
+	OutPut string
+}
+
+var collectParam = &CollectParam{}
+var cdnParam = &CdnParam{}

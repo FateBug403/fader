@@ -5,4 +5,5 @@ type Config struct {
 	Collect Collect    `mapstructure:"collect" yaml:"collect"`
 	Proxy   string     `mapstructure:"proxy" yaml:"proxy"`
 	OneForAll string   `mapstructure:"oneforall" yaml:"oneforall"`
+	CDN       CDN   `mapstructure:"cdn" yaml:"cdn"`
 }

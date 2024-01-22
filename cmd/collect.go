@@ -22,7 +22,7 @@ var collectCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		var err error
 
-		_,err=os.Stat(cliParam.InputFile)
+		_,err=os.Stat(collectParam.InputFile)
 		if os.IsNotExist(err){
 			cobra.CheckErr(fmt.Errorf("输入文件未找到"))
 		}
@@ -32,19 +32,19 @@ var collectCmd = &cobra.Command{
 			cobra.CheckErr(fmt.Errorf("没有找到系统指定的OneForAll文件夹,请在config.yaml文件中指定或者重新配置"))
 		}
 
-		if cliParam.CollectOutput==""{
-			cliParam.CollectOutput = "collectOut"
+		if collectParam.CollectOutput==""{
+			collectParam.CollectOutput = "collectOut"
 		}
-		err = util.CreatePath(cliParam.CollectOutput)
+		err = util.CreatePath(collectParam.CollectOutput)
 		if err != nil {
 			cobra.CheckErr(err)
 		}
 
 		// 开始运行Collect
 		options := &config.Options{
-			AliveVerify:  cliParam.AliveVerify,
-			OutputPath:   cliParam.CollectOutput,
-			Targets:      util.ReadFile(cliParam.InputFile),
+			AliveVerify:  collectParam.AliveVerify,
+			OutputPath:   collectParam.CollectOutput,
+			Targets:      util.ReadFile(collectParam.InputFile),
 			OnforAllPath: global.CONFIG.OneForAll,
 		}
 		r,err := runner.NewRunner(options)
@@ -60,9 +60,9 @@ var collectCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(collectCmd)
-	collectCmd.Flags().StringVarP(&cliParam.InputFile, "inputFile", "f","", "-f 或者 --inputFile 来传递输入文件")
-	collectCmd.Flags().StringVarP(&cliParam.CollectOutput, "output", "o","", "-o 或者 --output 来传递输出文件")
-	collectCmd.Flags().BoolVarP(&cliParam.AliveVerify,"aliveVerify","a",true,"-a 或者 --aliveVerify 来对收集的网站进行存活探测")
+	collectCmd.Flags().StringVarP(&collectParam.InputFile, "inputFile", "f","", "-f 或者 --inputFile 来传递输入文件")
+	collectCmd.Flags().StringVarP(&collectParam.CollectOutput, "output", "o","", "-o 或者 --output 来传递输出文件")
+	collectCmd.Flags().BoolVarP(&collectParam.AliveVerify,"aliveVerify","a",true,"-a 或者 --aliveVerify 来对收集的网站进行存活探测")
 	err := collectCmd.MarkFlagRequired("inputFile")
 	if err != nil {
 		return

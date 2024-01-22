@@ -1,7 +1,10 @@
+cdn:
+    dnsserver: ""
 collect:
     test: ""
     test2: ""
 fofa:
+    api: ""
     mail: ""
     key: ""
 oneforall: ""
