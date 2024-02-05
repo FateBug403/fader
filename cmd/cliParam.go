@@ -14,7 +14,7 @@ type CdnParam struct {
 
 type TestParam struct {
 	Proxy bool
-
+	FoFa  bool
 }
 
 var collectParam = &CollectParam{}
