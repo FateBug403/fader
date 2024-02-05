@@ -7,7 +7,7 @@ require (
 	github.com/FateBug403/FoFa v1.0.3
 	github.com/FateBug403/OneForAll_go v1.0.1
 	github.com/FateBug403/cdn v1.0.1
-	github.com/FateBug403/httpx v1.0.2
+	github.com/FateBug403/httpx v1.0.4
 	github.com/FateBug403/util v1.0.4
 	github.com/fsnotify/fsnotify v1.7.0
 	github.com/spf13/cobra v1.8.0

@@ -12,5 +12,12 @@ type CdnParam struct {
 	OutPut string
 }
 
+type TestParam struct {
+	Proxy bool
+
+}
+
 var collectParam = &CollectParam{}
 var cdnParam = &CdnParam{}
+
+var testParam = &TestParam{}

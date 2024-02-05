@@ -9,8 +9,8 @@ github.com/FateBug403/OneForAll_go v1.0.1 h1:eSbq1AKerqGP4MK+5+NZl7Ncug3CnHpxHI9
 github.com/FateBug403/OneForAll_go v1.0.1/go.mod h1:mzhfDYOkM2+VYI6j5KKb/mxWTBbfFzW2h8UyvLY/bRA=
 github.com/FateBug403/cdn v1.0.1 h1:ecBT7LheAFVcMlTH1t3w2LUt27vZd/BGAwk1ZWJT1Hc=
 github.com/FateBug403/cdn v1.0.1/go.mod h1:DfQoIGNCYqWJwdTFeOW1Ppm9lPNBNTgo86KNi6x85bg=
-github.com/FateBug403/httpx v1.0.2 h1:ScaVaCxpn/p9Tl93Hj5wIztcPJ9KiK9jf3wayu5WiJw=
-github.com/FateBug403/httpx v1.0.2/go.mod h1:PK8y+a9k89sVyPBgQlJHY2XsQ9V5u0nVmay4Ce4VB2o=
+github.com/FateBug403/httpx v1.0.4 h1:Vv0Xa0Y01O7Ki49H0W8GDpkshza/V6hye9RroMydGEM=
+github.com/FateBug403/httpx v1.0.4/go.mod h1:PK8y+a9k89sVyPBgQlJHY2XsQ9V5u0nVmay4Ce4VB2o=
 github.com/FateBug403/util v1.0.4 h1:2GS+O3Balhz4Bj69KMfWpIvdbljxvd76/y5/Bt/y8fg=
 github.com/FateBug403/util v1.0.4/go.mod h1:PYIMTDhUJf1ES/9Npbn+b9W1O7OOiWdmnhVjItpOxIk=
 github.com/Knetic/govaluate v3.0.0+incompatible h1:7o6+MAPhYTCF0+fdvoz1xDedhRb4f6s9Tn1Tt7/WTEg=
