@@ -51,6 +51,8 @@ var TestCmd = &cobra.Command{
 			})
 			if err != nil {
 				log.Println(err)
+			}else {
+				log.Println("FoFa账号验证成功")
 			}
 			os.Exit(0)
 		}
